@@ -1,3 +1,9 @@
+<div align="right">
+
+🇨🇳 中文 · [🇺🇸 English](README.en.md)
+
+</div>
+
 # Hermes 进化观测台 · Evolution Observatory
 
 > 让 Hermes Agent 的每一次自我进化，从**黑盒**里走出来。
