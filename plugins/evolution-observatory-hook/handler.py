@@ -61,12 +61,19 @@ _current_turn = 0
 
 def register(ctx):
     """插件注册入口 — Hermes 启动时调用"""
-    ctx.register_hook("pre_tool", _on_pre_tool)  # ← 新增：patch/edit 前拍快照
-    ctx.register_hook("post_tool", _on_post_tool)
+    ctx.register_hook("pre_tool_call", _on_pre_tool)   # ← patch/edit 前拍快照
+    ctx.register_hook("post_tool_call", _on_post_tool)
     ctx.register_hook("on_session_start", _on_session_start)
     ctx.register_hook("on_session_end", _on_session_end)
     ctx.register_hook("post_llm_call", _on_post_llm_call)
-    ctx.logger.info("Evolution Observatory Hook registered (with checkpoints)")
+    # PluginContext 没有 logger 属性，用标准 logging 兜底
+    try:
+        import logging as _logging
+        _logging.getLogger("evolution-observatory-hook").info(
+            "Evolution Observatory Hook registered (with checkpoints)"
+        )
+    except Exception:
+        pass
 
 
 # ═══════════ Checkpoint 机制 ═══════════
