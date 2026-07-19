@@ -51,12 +51,12 @@ Hermes Agent 有多个进化机制：`memory`（长期记忆）、`skill_manage`
     <td><img src="screenshots/timeline.png" alt="进化时间线" width="400"></td>
   </tr>
   <tr>
-    <td align="center"><b>记忆状态</b></td>
     <td align="center"><b>技能库</b></td>
+    <td align="center"><b>进化谱系树</b></td>
   </tr>
   <tr>
-    <td><img src="screenshots/memory.png" alt="记忆状态" width="400"></td>
     <td><img src="screenshots/skills.png" alt="技能库" width="400"></td>
+    <td><img src="screenshots/lineage.png" alt="进化谱系树" width="400"></td>
   </tr>
 </table>
 
