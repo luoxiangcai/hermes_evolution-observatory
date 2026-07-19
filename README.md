@@ -25,11 +25,11 @@ Hermes Agent 有多个进化机制：`memory`（长期记忆）、`skill_manage`
 > 下图是实际运行中的界面（点击截图可放大看）。此外还有一份**带完整演示数据的交互原型** 👇
 
 <div align="center">
-  <a href="screenshots/demo.html">
-    <img src="https://img.shields.io/badge/📱_在线演示-点击查看_demo.html-blue?style=for-the-badge" alt="在线演示">
+  <a href="https://luoxiangcai.github.io/hermes_evolution-observatory/demo.html" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_在线演示-点击打开可交互页面-blue?style=for-the-badge" alt="在线演示">
   </a>
   <br>
-  <sub>💡 下载后直接在浏览器打开，所有数据（47 个技能、8 次 GEPA 进化、3 条待审批等）都是预填充的演示数据</sub>
+  <sub>💡 所有数据（47 个技能、8 次 GEPA 进化、3 条待审批等）都是预填充的演示数据，可直接交互</sub>
 </div>
 
 <br>
