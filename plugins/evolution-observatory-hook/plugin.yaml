@@ -1,0 +1,4 @@
+name: evolution-observatory-hook
+description: "进化观测台事件采集器 — 监听 memory/skill_manage/skill_view 工具调用，写入 evolution-events.jsonl 并推送到观测台后端"
+version: "1.0.0"
+author: "Evolution Observatory"

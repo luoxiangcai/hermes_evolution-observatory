@@ -1,0 +1,71 @@
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.Python
+
+# ─── 虚拟环境 ───
+.venv/
+venv/
+env/
+ENV/
+
+# ─── 测试 & 覆盖率 ───
+.pytest_cache/
+pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+# ─── IDE / 编辑器 ───
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ─── 日志 & 运行时数据 ───
+logs/
+*.log
+*.pid
+
+# ─── 环境变量 & 密钥（切勿提交） ───
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# ─── 本地缓存 & 临时文件 ───
+*.tmp
+*.bak
+*.orig
+*.rej
+.cache/
+
+# ─── 数据文件（本地） ───
+*.sqlite
+*.sqlite3
+*.db
+
+# ─── mypy / ruff 缓存 ───
+.mypy_cache/
+.ruff_cache/
+
+# ─── uv / pip 锁文件冲突（可视情况移除） ───
+# uv.lock 建议提交，pip-tools 生成的 requirements.lock 也可以提交
+
+# ─── 本项目专属 ───
+# 快照会在运行时生成到 ~/.hermes/*/skills/.checkpoints/
+# 事件日志在 ~/.hermes/*/logs/evolution-events.jsonl
+# 这些都在用户目录，不会进项目仓库

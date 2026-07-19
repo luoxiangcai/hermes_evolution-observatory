@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-evolution-observatory"
+version = "0.1.0"
+description = "Hermes 进化观测台 — 横切所有 Hermes 进化机制之上的只读观测层，采集进化事件、织成进化谱系、呈现进化叙事"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+    { name = "luoxiangcai" },
+]
+keywords = ["hermes", "ai-agent", "observability", "evolution", "fastapi"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "httpx>=0.25.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/luoxiangcai/hermes_evolution-observatory"
+Repository = "https://github.com/luoxiangcai/hermes_evolution-observatory"
+Changelog = "https://github.com/luoxiangcai/hermes_evolution-observatory/blob/main/CHANGELOG.md"
+Issues = "https://github.com/luoxiangcai/hermes_evolution-observatory/issues"
+
+[project.scripts]
+evolution-observatory = "backend.main:main"
+
+[tool.setuptools]
+# 采用发现模式：明确列出源码目录
+packages = ["backend", "backend.collectors"]
+
+[tool.setuptools.package-data]
+"backend" = ["../frontend/*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["B011"]  # tests 里允许 assert False

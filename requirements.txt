@@ -1,0 +1,14 @@
+# Hermes 进化观测台 — 依赖
+
+# 后端
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+httpx>=0.25.0
+pydantic>=2.0.0
+
+# 前端（纯 HTML，无构建依赖）
+# 无额外依赖
+
+# 测试
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
